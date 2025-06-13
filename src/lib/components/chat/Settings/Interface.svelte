@@ -62,7 +62,7 @@
 
 	// Admin - Show Update Available Toast
 	let showUpdateToast = true;
-	let showChangelog = true;
+	let showChangelog = false;
 
 	let showEmojiInCall = false;
 	let voiceInterruption = false;

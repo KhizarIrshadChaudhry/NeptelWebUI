@@ -153,20 +153,20 @@ def parse_section(section):
     return items
 
 
-try:
-    changelog_path = BASE_DIR / "CHANGELOG.md"
-    with open(str(changelog_path.absolute()), "r", encoding="utf8") as file:
-        changelog_content = file.read()
-
-except Exception:
-    changelog_content = (pkgutil.get_data("open_webui", "CHANGELOG.md") or b"").decode()
+#try:
+#    changelog_path = BASE_DIR / "CHANGELOG.md"
+#    with open(str(changelog_path.absolute()), "r", encoding="utf8") as file:
+#        changelog_content = file.read()
+#
+#except Exception:
+#    changelog_content = (pkgutil.get_data("open_webui", "CHANGELOG.md") or b"").decode()
 
 # Convert markdown content to HTML
-html_content = markdown.markdown(changelog_content)
+#html_content = markdown.markdown(changelog_content)
 
 # Parse the HTML content
-soup = BeautifulSoup(html_content, "html.parser")
-
+#soup = BeautifulSoup(html_content, "html.parser")
+"""
 # Initialize JSON structure
 changelog_json = {}
 
@@ -192,7 +192,7 @@ for version in soup.find_all("h2"):
     changelog_json[version_number] = version_data
 
 CHANGELOG = changelog_json
-
+"""
 ####################################
 # SAFE_MODE
 ####################################
